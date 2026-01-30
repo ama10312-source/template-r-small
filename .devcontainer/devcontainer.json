@@ -1,6 +1,6 @@
 // For format details, see https://aka.ms/devcontainer.json. 
 {
-    "name": "recap-template-r-medium",
+    "name": "recap-template-r-small",
     "image": "ghcr.io/recap-org/r:2026-q1",
     // 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
     // "features": {},
@@ -10,14 +10,12 @@
             "extensions": [
                 "RDebugger.r-debugger",
                 "REditorSupport.r",
-                "quarto.quarto",
-                "James-Yu.latex-workshop"
+                "quarto.quarto"
             ],
             "settings": {
                 "r.bracketedPaste": true,
                 "r.rterm.linux": "/usr/local/bin/radian",
-                "r.plot.useHttpgd": true,
-                "latex-workshop.formatting.latex": "tex-fmt"
+                "r.plot.useHttpgd": true
             }
         }
     },

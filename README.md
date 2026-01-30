@@ -1,4 +1,4 @@
-# RECAP Template : R - Medium
+# RECAP Template : R - Small
 
 ## Purpose
 
@@ -30,10 +30,10 @@ You have two options:
 
 ## Demo
 
-First, install the R packages used in this template. Open an R console and type:
+First, install the R packages used in this template. Open a terminal and type:
 
-```r
-install.packages(c("tidyverse", "modelsummary", "testthat"))
+```bash
+Rscript -e "install.packages(c('tidyverse', 'modelsummary'))"
 ```
 
 Open `./src/main.qmd` and hit the Preview button (top right corner) or press `Cmd + Shift + K` to compile the report. You should see a pdf report with some basic data analysis and a photo in `./bin/src/main.pdf`.
@@ -45,16 +45,15 @@ This template is organized as follows
 ```bash
 ├── LICENSE
 ├── README.md
-├── assets # where images and other static assets live
-├── bin
-│   └── src # compiled report ouput
-├── data # where the raw data lives
-├── _quarto.yaml # quarto options
-├── .lintr # R linting options
+├── assets # where images, latex bibliography and other static assets live (committed to git)
+└── library.bib
+├── data # raw data goes here (committed to git)
 ├── src
-│   ├── lib # R helper functions go here
-│   └── main.qmd # your analysis report
-└── library.bib # bibliography file
+│   ├── main.qmd # generate the final report
+│   └── lib # helper functions
+├── bin # where your generated report is stored (not committed to git)
+├── _quarto.yaml # configuration for Quarto
+└── .lintr # configuration for R linting
 ```
 
 #### Producing the report
