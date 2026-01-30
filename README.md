@@ -1,0 +1,81 @@
+# RECAP Template : R - Medium
+
+## Purpose
+
+This repository is a [RECAP](https://recap-org.github.io) template for small-sized academic data projects with R. It is designed to run in cloud IDEs (e.g., GitHub Codespaces) and local IDEs (VS Code, RStudio). Key features:
+
+- A containerized, reproducible software environment that allows running this template on the browser.
+- Documentation and tutorials (see the [RECAP](https://recap-org.github.io) site) to help you get started and teach collaborators.
+
+## Getting started
+
+To get started, above the file list, click **Use this template**.
+
+![Use this template button](https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp)
+
+You have two options: 
+
+### Try it out online
+
+1. Select **Open in a codespace**. 
+2. Wait for the codespace to be created and started. **This may take up to 20 minutes.** ☕
+3. Once the codespace is ready, you can follow the instructions in the **Basic demo** section below.
+
+### Make your own copy
+
+1. Select **Create a new repository**.
+2. Once it is ready, you can: 
+    - Open it in GitHub Codespaces by clicking the green **Code** button and selecting **Open with Codespaces > New codespace**.
+    - Clone it to your local machine use it locally. You can use the provided containerized environment for a one-click install of all the dependencies (documentation for [VS Code](https://code.visualstudio.com/docs/remote/containers) and for Positron)
+
+## Demo
+
+First, install the R packages used in this template. Open an R console and type:
+
+```r
+install.packages(c("tidyverse", "modelsummary", "testthat"))
+```
+
+Open `./src/main.qmd` and hit the Preview button (top right corner) or press `Cmd + Shift + K` to compile the report. You should see a pdf report with some basic data analysis and a photo in `./bin/src/main.pdf`.
+
+## Using this template
+
+This template is organized as follows
+
+```bash
+├── LICENSE
+├── README.md
+├── assets # where images and other static assets live
+├── bin
+│   └── src # compiled report ouput
+├── data # where the raw data lives
+├── _quarto.yaml # quarto options
+├── .lintr # R linting options
+├── src
+│   ├── lib # R helper functions go here
+│   └── main.qmd # your analysis report
+└── library.bib # bibliography file
+```
+
+#### Producing the report
+
+The file `./src/main.qmd` produces the final report. It generates a pdf at `./bin/src/main.pdf`.
+
+### Helper functions
+
+Helper functions are shared across your data and analysis code. They are declared in `.R` files that are placed in `./src/lib`. Think of these helper functions as a quasi-R package that accompanies the project. As such, each of these functions should be properly documented so that all collaborators understand how they work.  
+
+### Configuration
+
+Look into the following files to tweak things as you see fit: 
+
+- `./.lintr`: R linting options
+- `./_quarto.yaml`: Quarto options
+
+## Credits
+
+We thank 
+
+- [Jason Leung](https://unsplash.com/@ninjason?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/donkey-kong-arcade-game-screen-with-1981-date-c5tiCWrZADc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) for that nice Donkey Kong photo.
+- [grandmaster07](https://www.kaggle.com/grandmaster07) for the student exam score dataset analysis published on [Kaggle](https://www.kaggle.com/datasets/grandmaster07/student-exam-score-dataset-analysis)
+

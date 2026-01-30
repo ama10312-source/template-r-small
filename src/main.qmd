@@ -1,0 +1,74 @@
+---
+title: "Analysis"
+date: "`r Sys.Date()`"
+---
+
+```{r}
+#| label: setup
+
+# load packages
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(modelsummary))
+
+# read data
+source("./src/lib/io.R")
+df <- read_csv("./data/data.csv", show_col_types = FALSE)
+```
+
+# Introduction
+
+This paper aims to analyze the relationship between students' exam scores and various predictors such as hours studied, sleep hours, attendance percentage, and previous scores. @Doe found that hours studied and attendance percentage were significant predictors of exam scores [@Doe]. This analysis seeks to validate and extend those findings using a more comprehensive dataset.
+
+# Data
+
+```{r}
+#| label: data cleaning
+#| tbl-cap: Data summary
+
+df <- df |> mutate(
+  attendance_percent = attendance_percent / 100,
+  previous_scores = previous_scores / 100,
+  exam_score = exam_score / 100
+)
+
+datasummary_skim(
+  df,
+  fun_numeric = list(
+    Mean = Mean,
+    SD = SD
+  ),
+  escape = FALSE
+)
+```
+
+# Results
+
+```{r}
+#| label: analysis
+#| tbl-cap: Regression table
+
+models <- list(
+  lm(exam_score ~ previous_scores, data = df),
+  lm(exam_score ~ hours_studied + sleep_hours + attendance_percent + previous_scores, data = df)
+)
+```
+
+```{r}
+#| label: table
+#| tbl-cap: Regression table
+
+m <- modelsummary(models, output = "tinytable")
+m # show the table in the quarto report
+```
+
+```{r}
+#| label: plot
+#| fig-cap: Coefficient plot
+
+modelplot(models)
+```
+
+![Monkey in the city](../assets/dk.jpg)
+
+
+# References
