@@ -80,6 +80,15 @@ Look into the following files to tweak things as you see fit:
 - `./.lintr`: R linting options
 - `./_quarto.yaml`: Quarto options
 
+## Software environment
+
+This template comes with a reproducible execution environment that includes R, Quarto, and other required tools.
+
+The exact software stack (including versions) is documented in the **[RECAP 2026 Q1 image release](https://github.com/recap-org/images/releases/tag/2026-q1)**.
+
+This information is mainly useful if you need to check versions or debug environment-specific issues.  
+You do not need to understand or modify this to use the template.
+
 ## Issues and feedback
 
 If something doesn’t work as expected, or if you have a suggestion for improving this template, please open an issue on this repository (Issue tab ⬆️).
