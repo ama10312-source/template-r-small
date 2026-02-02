@@ -1,10 +1,16 @@
 ---
 title: "Analysis"
 date: "`r Sys.Date()`"
+author: "Morgan Doe"
+bibliography: ../assets/references.bib
+format: 
+  html: 
+    embed-resources: true
 ---
 
 ```{r}
 #| label: setup
+#| echo: false
 
 # load packages; hide startup messages for pretty output
 suppressPackageStartupMessages(library(tidyverse))
