@@ -10,12 +10,14 @@
             "extensions": [
                 "RDebugger.r-debugger",
                 "REditorSupport.r",
-                "quarto.quarto"
+                "quarto.quarto",
+                "James-Yu.latex-workshop"
             ],
             "settings": {
                 "r.bracketedPaste": true,
                 "r.rterm.linux": "/usr/local/bin/radian",
-                "r.plot.useHttpgd": true
+                "r.plot.useHttpgd": true,
+                "latex-workshop.formatting.latex": "tex-fmt"
             }
         }
     },
