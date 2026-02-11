@@ -16,13 +16,13 @@ To get started, click the **Use this template** button above the file list ⬆�
 
 You have two options: 
 
-### Try it out online
+### Try it out online (without saving your work)
 
 1. Select **Open in a codespace**. 
 2. Wait for the codespace to be created and started. **This may take up to 5 minutes.** ☕
 3. Once the codespace is ready, you can follow the instructions in the **Basic demo** section below.
 
-### Make your own copy
+### Make your own copy (to save your work)
 
 If you want to keep working on this project (locally or in the cloud), create your own copy of the template.
 
@@ -41,7 +41,7 @@ First, install the R packages used in this template. Open a terminal and type:
 Rscript -e "install.packages(c('tidyverse', 'modelsummary'))"
 ```
 
-Open `./src/main.qmd` and hit the Preview button (top right corner) or press `Cmd + Shift + K` to render the report. You will find a PDF report with some basic data analysis and a photo in `./out/src/main.pdf`.
+Open `./src/main.qmd` and hit the Preview button (top right corner) or press `Cmd + Shift + K` to render the report. You will find an HTML report with some basic data analysis and a photo in `./out/src/main.html`.
 
 ## Using this template
 
